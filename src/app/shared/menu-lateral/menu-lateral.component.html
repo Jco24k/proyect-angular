@@ -1,0 +1,133 @@
+<nav class="bg-dark d-grid text-light box__menu">
+  <div class="box__logo">
+      JCM
+  </div>
+  <div>
+      <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+      </label>
+  </div>
+  <div [textContent]="sub"></div>
+</nav>
+
+<div class="wrapper">
+    <input type="checkbox" id="btn" [(ngModel)]="ocultar" hidden>
+
+    <nav id="sidebar">
+        <div class="box-table-global">
+            <div class="box-table">
+                <ul class="list-items">
+                    <li><a  (click)="ocultarMenu()">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-al">
+                        <a>
+                            <i class='bx bxs-box'></i>
+                            Almacen</a>
+                        <div class="collapse" id="orders-collapse-al">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li class="sub__menu"><a href="#">Categorias</a></li>
+                                <li><a href="#">Presentacion</a></li>
+                                <li><a href="#">Marca</a></li>
+                                <li><a  (click)="ocultarMenu()">Productos</a></li>
+                                <li><a href="#">Proveedor</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-ct">
+                        <a>
+                            <i class='bx bxs-file'></i>
+                            Cotizaciones</a>
+                        <div class="collapse" id="orders-collapse-ct">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#">Generar Cotizaciones</a></li>
+                                <li><a href="#">Ver Cotizaciones</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-cps">
+                        <a>
+                            <i class='bx bxs-file'></i>
+                            Compras</a>
+                        <div class="collapse" id="orders-collapse-cps">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a  (click)="ocultarMenu()">Proveedores</a></li>
+                                <li><a   (click)="ocultarMenu()">Realizar Compras</a></li>
+                                <li><a href="#">Compras por Fecha</a></li>
+                                <li><a href="#">Compras del Mes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-vt">
+                        <a>
+                            <i class='bx bxs-cart'></i>
+                            Ventas</a>
+                        <div class="collapse" id="orders-collapse-vt">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a  (click)="ocultarMenu()">Clientes</a></li>
+                                <li><a   (click)="ocultarMenu()">Realizar Ventas</a></li>
+                                <li><a   (click)="ocultarMenu()">ventas del Dia</a></li>
+                                <li><a href="#">ventas del Mes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-vc">
+                        <a>
+                            <i class='bx bx-credit-card'></i>
+                            Ventas al Credito</a>
+                        <div class="collapse" id="orders-collapse-vc">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#">Administrar Creditos</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-iv">
+                        <a>
+                            <i class='bx bxs-package'></i>
+                            Inventario</a>
+                        <div class="collapse" id="orders-collapse-iv">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#">Nuevo Inventario</a></li>
+                                <li><a href="#">Kardex</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-cb">
+                        <a>
+                            <i class='bx bxs-file-export'></i>
+                            Comprobantes</a>
+                        <div class="collapse" id="orders-collapse-cb">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#">Tipos de Comprobante</a></li>
+                                <li><a href="#">Tiraje de Comprobante</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li data-bs-toggle="collapse" data-bs-target="#orders-collapse-ur">
+                        <a>
+                            <i class='bx bxs-group'></i>
+                            Usuarios</a>
+                        <div class="collapse" id="orders-collapse-ur">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a  (click)="ocultarMenu()">Empleados</a></li>
+                                <li><a href="#">Usuario</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a routerLink="/login" routerLinkActive="active" (click)="logout()">
+                        <i class='bx bx-log-out-circle'></i>
+
+                            Salir</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

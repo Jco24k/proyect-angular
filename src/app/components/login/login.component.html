@@ -1,0 +1,28 @@
+<div class="body">
+
+  <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card">
+    <div class="card-body">
+      <div class="contenido bg-opacity-50">
+        <h2 id="login" >Login</h2>
+        <form id="forml" name="forml" method="post" [formGroup]="formLogin" (ngSubmit)="login()">
+            <div class="elemento">
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario"   required="true"
+                formControlName="email"/>
+            </div>
+            <div class="elemento">
+                <input type="password" id="contra" name="password" placeholder="Contraseña" required="true" formControlName="pass"/>
+            </div>
+            <br/>
+            <div id="procesar">
+                <input id="ingresar"type="submit" value="Ingresar"/>
+                <p><a href="#" id="prueba">¿Olvidaste tu contraseña?</a></p>
+            </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>

@@ -1,0 +1,65 @@
+.box__home{
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.box__home__div{
+  margin: 10px 1%;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 23%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.box__celeste{
+  background-color: rgb(0, 171, 214);
+}
+.box__celeste__bajo{
+  background-color: rgb(59, 218, 210);
+}
+.box__rojo{
+  background-color: rgb(255, 93, 93);
+}
+.box__verder__claro{
+  background-color: rgb(80, 180, 80);
+}
+.box__anaranjado{
+  background-color: rgb(255, 186, 57);
+}
+.box__lila__claro{
+  background-color:rgb(155, 130, 247);
+}
+.box__verde{
+  background-color: rgb(88, 219, 88);
+}
+
+.box__lila{
+  background-color: rgb(130, 92, 219);
+}
+.box__rosado{
+  background-color: rgb(248, 128, 242);
+}
+.box__morado{
+  background-color: rgb(192, 124, 255);
+}
+
+.iconos__home{
+  font-size: 2.9em;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+
+	.box__home {
+		flex-direction: column;
+    justify-content: center;
+	}
+
+	.box__home__div {
+		width: 100%;
+    margin: 10px auto;
+	}
+}
