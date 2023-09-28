@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app_proyect:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: proyect_login
+    volumes:
+      - /usr/src/node_modules
+    ports:
+      - "4200:4200"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.30"
+          memory: 250M
+        reservations:
+          cpus: "0.1"
+          memory: 128M
